@@ -12,6 +12,17 @@ body { margin:0; font-family:'Inter',sans-serif; background:#0B0B0B; color:#eaea
 .hero-inner { position:relative; z-index:1; text-align:center; }
 h1 { font-family:'Playfair Display',serif; font-size:64px; margin-bottom:0; }
 .sub { font-size:20px; color:#b8b8b8; }
+.countdown { 
+  margin-top: 32px; 
+  font-size: 32px; 
+  font-family: 'Playfair Display', serif; 
+  background: rgba(0,0,0,0.5); 
+  border-radius: 16px; 
+  padding: 16px 32px; 
+  display: inline-block; 
+  box-shadow: 0 4px 24px #0008; 
+}
+.countdown span { font-weight: 700; color: #fffbe6; min-width: 40px; display: inline-block; text-align: center; }
 </style>
 </head>
 <body>
@@ -19,7 +30,14 @@ h1 { font-family:'Playfair Display',serif; font-size:64px; margin-bottom:0; }
 <div class="hero-inner">
 <h1>Caroline e Nikita</h1>
 <p class="sub">18 de abril de 2026 — Espaço Casa Dona Diquinha, Cotia</p>
+<div class="countdown" id="countdown">
+  <span id="days">0</span> dias
+  <span id="hours">00</span>h
+  <span id="minutes">00</span>m
+  <span id="seconds">00</span>s
+</div>
 </div>
 </section>
+<script src="script.js"></script>
 </body>
 </html>
