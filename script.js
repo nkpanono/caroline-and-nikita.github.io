@@ -21,31 +21,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Countdown
-function startCountdown() {
-  const el = document.querySelector('.countdown');
-  if (!el) return;
-  const dateStr = el.getAttribute('data-date');
-  const target = new Date(dateStr).getTime();
-
-  function tick() {
-    const now = Date.now();
-    const diff = Math.max(0, target - now);
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-
-    document.getElementById('d').textContent = d;
-    document.getElementById('h').textContent = String(h).padStart(2,'0');
-    document.getElementById('m').textContent = String(m).padStart(2,'0');
-    document.getElementById('s').textContent = String(s).padStart(2,'0');
-  }
-  tick();
-  setInterval(tick, 1000);
-}
-startCountdown();
-
 // Countdown to 18/04/2026
 function updateCountdown() {
   const target = new Date('2026-04-18T00:00:00-03:00');
