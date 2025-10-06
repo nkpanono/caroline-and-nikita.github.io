@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- add this inside <head>, before your internal <style> or remove internal if you want external to win -->
+<link rel="stylesheet" href="style.css">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +23,7 @@
       font-style: normal;
     }
     :root{
-      --bg:#F8F6F2; --ink:#111; --muted:#555; --card:#f7f7f7; --line:#e0e0e0;
+      --bg:#F7F6F2; --ink:#111; --muted:#555; --card:#f7f7f7; --line:#e0e0e0;
       --accent:#C1FFEA; --accent-ink:#0B3B2F; --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
@@ -37,7 +39,18 @@
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
     .names{font-family:"Playfair Display",serif;font-size:20px}
-    .chip{font-size:12px;padding:6px 10px;border-radius:999px;background:#111;border:1px solid var(--line);color:var(--muted)}
+    .chip {
+      background: var(--bg);
+      color: #111;
+      font-weight: 800;
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      -webkit-text-stroke: 0;
+      text-shadow: none;
+      font-family: 'Poiret One', 'Inter', Arial, sans-serif;
+    }
     .menu{display:flex;gap:14px;flex-wrap:wrap}
     .menu a{padding:10px 12px;border-radius:10px}
 
@@ -46,17 +59,24 @@
     .hero::before{content:"";position:absolute;inset:0;background:url('cover_2.jpg') center/cover no-repeat;filter:grayscale(.1) contrast(1.05);}
     .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.40),rgba(0,0,0,.65))}
     .hero-inner{position:relative;z-index:1;text-align:center;max-width:820px;padding:24px}
-    .kicker{letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--muted)}
+    .kicker{letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#fff}
     h1{font-family:"Playfair Display",serif;font-size:64px;line-height:1.06;margin:10px 0}
-    .sub{color:var(--muted);font-size:18px}
+    .sub{color:#fff;font-size:18px}
     .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-    .btn, .btn.primary {
+    .btn, .btn-primary, .pill, .chip {
+      background: #81D8D0 !important;
+      color: #111 !important;
       font-weight: 800;
-      color: #fff !important;
-      text-shadow: none !important;
-      display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:#111;
+      border: none;
+      border-radius: 14px;
+      padding: 12px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      -webkit-text-stroke: 0;
+      text-shadow: none;
+      font-family: 'Poiret One', 'Inter', Arial, sans-serif;
     }
-    .btn.primary{background:#111;color:#fff;border-color:transparent}
 
     /* BLOCKS */
     section{padding:56px 0;border-top:1px solid var(--line)}
@@ -74,27 +94,137 @@
     /* MASONRY GALLERY */
     .masonry{column-count:3;column-gap:14px}
     .masonry img{break-inside:avoid;margin:0 0 14px;border-radius:12px}
-    @media (max-width:980px){.two{grid-template-columns:1fr}.masonry{column-count:2}}
-    @media (max-width:640px){.masonry{column-count:1} h1{font-size:40px}}
+    @media (max-width:980px){
+      .two{grid-template-columns:1fr}
+      .masonry{column-count:2}
+    }
+    @media (max-width:640px){
+      .two{grid-template-columns:1fr !important;}
+      .grid.two{grid-template-columns:1fr !important;}
+      .masonry{column-count:1 !important;}
+      h1{font-size:40px}
+      body, p, .muted, .timeline, .menu a, .small, input, textarea, label, .countdown {
+        font-size: 1.08em;
+      }
+      .btn, .btn-primary, .pill, .chip {
+        font-size: 1.08em;
+        padding: 16px 20px;
+        min-height: 48px;
+      }
+      .cta {
+        gap: 16px;
+      }
+      .menu a {
+        font-size: 1.08em;
+        padding: 14px 16px;
+      }
+      .hero-inner {
+        padding: 10px;
+        max-width: 98vw;
+      }
+      .hero-inner img[alt*="Logo"] {
+        max-width: 80px !important;
+        margin-bottom: 10px !important;
+      }
+      .kicker {
+        font-size: 10px;
+        margin-bottom: 4px;
+      }
+      .sub {
+        font-size: 15px;
+      }
+      /* FAQ card responsiveness */
+      #faq.faq {
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 0 24px 0 !important;
+      }
+      #faq .card {
+        padding: 14px 6px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      }
+      /* Bottom logo responsiveness */
+      body > div[style*='logo_wedding_black'] {
+        margin: 24px 0 0 0 !important;
+      }
+      body > div[style*='logo_wedding_black'] img {
+        max-width: 70px !important;
+      }
+      /* NEW: Section and card spacing for mobile */
+      section {
+        padding: 28px 6vw 28px 6vw !important;
+      }
+      .container {
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
+      }
+      .card {
+        padding: 16px 8px !important;
+        margin-bottom: 18px !important;
+      }
+      .grid, .two {
+        gap: 16px !important;
+      }
+      main.container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
 
     /* FLOATING RSVP */
     .floating-rsvp{position:fixed;right:16px;bottom:16px;z-index:50}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:var(--accent);color:#d32f2f !important;font-weight:700}
+    .pill {
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#000 !important;color:#d32f2f !important;font-weight:700;
+      -webkit-text-stroke: 0 !important;
+      text-shadow: none !important;
+    }
 
     footer{padding:40px 0 80px;color:var(--muted);text-align:center}
     .small{font-size:12px}
 
-    body, p, .sub, .muted, .btn, .pill, .chip, .timeline, .menu a, .small, input, textarea, label, .countdown {
+    body, p, .muted, .timeline, .menu a, .small, input, textarea, label, .countdown {
       font-family: 'Poiret One', 'Inter', Arial, sans-serif !important;
       font-weight: 400;
       letter-spacing: 0.01em;
-      -webkit-text-stroke: 0.5px var(--ink);
-      text-stroke: 0.5px var(--ink);
     }
     h1, h2, h3, .faq-title, .lines, .names {
       font-family: 'Morrison', 'Playfair Display', serif !important;
       font-weight: 400;
       letter-spacing: 0.02em;
+    }
+    .chip, .pill {
+      -webkit-text-stroke: 0 !important;
+      text-shadow: none !important;
+    }
+    @media (max-width:640px){
+      header {
+        padding: 0 0 0 0 !important;
+        min-height: 0 !important;
+      }
+      .container.nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 10px 2vw 10px 2vw !important;
+      }
+      .brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px !important;
+        font-size: 1em !important;
+        margin-bottom: 2px !important;
+      }
+      .names {
+        font-size: 18px !important;
+      }
+      .chip {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+      }
+      .menu {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -117,12 +247,13 @@
 
   <section class="hero" id="top">
     <div class="hero-inner">
+      <img src="logo_wedding.png" alt="Logo Caroline e Nikita" style="display:block;margin:0 auto 18px auto;max-width:120px;width:100%;height:auto;" />
       <div class="kicker">C + N</div>
-      <h1>Caroline e Nikita</h1>
-      <p class="sub">dezoito de abril de dois mil e vinte e seis, às 15h — Espaço Casa Dona Diquinha, Cotia.</p>
+      <h1>Caroline + Nikita</h1>
+      <p class="sub">dezoito de abril de dois mil e vinte e seis, às quinze horas — Cotia, SP.</p>
       <div class="cta">
-        <a class="btn primary" id="rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
-        <a class="btn" href="#detalhes">Ver programação</a>
+        <a class="btn-primary" id="rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
+        <a class="btn-primary" href="#detalhes">Ver programação</a>
       </div>
       <p class="small" id="countdown" aria-live="polite">…</p>
     </div>
@@ -133,13 +264,13 @@
       <div class="card">
         <h2>História</h2>
         <p class="muted">Caroline e Nikita se conheceram em fevereiro de 2020.<br>
-No meio de milhares de pessoas, no bloquinho de Carnaval de Caetano Veloso, os olhares se cruzaram e, entre confete e serpentina, os dois se encontraram.</p>
+No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no bloquinho de Carnaval de Caetano Veloso, seus olhares se cruzaram e, entre confetes e serpentinas, eles se encontraram.</p>
 <p class="muted">Desde aquele dia, vieram viagens, risadas, jantares, planos e uma parceria que só cresceu. Entre o caos e a calmaria, entre o samba e as corridas, eles descobriram que o melhor lugar do mundo é onde estão juntos.</p>
 <p class="muted">Agora, alguns carnavais depois, chegou a hora de celebrar essa história, com todos que fizeram parte dela.</p>
       </div>
       <div class="card">
         <h2>Local</h2>
-        <p class="muted"><strong>Espaço Casa Dona Diquinha</strong><br><span>Cotia, SP</span><br><a href="https://casadadonadiquinha.com.br/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;font-size:14px">Site do espaço</a></p>
+        <p class="muted"><strong>Espaço Casa Dona Diquinha</strong><br><span>Cotia, SP</span><br><a href="https://casadadonadiquinha.com.br/" target="_blank" rel="noopener" style="color:#111;text-decoration:underline;font-size:14px">Site do espaço</a></p>
         <div class="cta">
           <a class="btn" id="mapsLink" target="_blank" rel="noopener">Abrir no Google Maps</a>
           <a class="btn" id="addCal">Adicionar ao calendário</a>
@@ -160,7 +291,7 @@ No meio de milhares de pessoas, no bloquinho de Carnaval de Caetano Veloso, os o
         </ul>
       </div>
       <div class="card">
-        <h3>Traje</h3>
+        <h3>Dress Code</h3>
         <p class="muted">Minimalista chic / esporte fino. Tons neutros bem‑vindos.</p>
         <h3 style="margin-top:18px">Onde ficar</h3>
         <ul class="muted">
@@ -191,7 +322,7 @@ No meio de milhares de pessoas, no bloquinho de Carnaval de Caetano Veloso, os o
     <section id="rsvp" class="grid two">
       <div class="card">
         <h2>Confirmação</h2>
-        <p class="muted">Por favor, confirme sua presença até <strong>01.12.2025</strong>.</p>
+        <p class="muted">Por favor, confirme sua presença até <strong style="letter-spacing:0.18em;">01.12.2025</strong>.</p>
         <a class="btn primary" id="rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Abrir formulário</a>
         <p class="small">Se precisar de ajuda, fale conosco no WhatsApp.</p>
       </div>
@@ -206,37 +337,107 @@ No meio de milhares de pessoas, no bloquinho de Carnaval de Caetano Veloso, os o
       </div>
     </section>
 
-    <section id="faq" class="grid two">
+    <section id="faq" class="faq" style="max-width:900px;margin:0 auto;">
       <div class="card">
-        <h2>FAQ</h2>
+        <h2 class="visually-hidden">Perguntas frequentes</h2>
+
+        <details>
+          <summary>Existe lista de presentes?</summary>
+          <p class="muted">
+            O seu carinho é o melhor presente. Mas, se ainda assim quiser contribuir, deixamos uma lista em
+            <a href="[loja/link]" target="_blank" rel="noopener">[loja/link]</a> — e algumas cotas de lua de mel, caso queira ajudar a nos tirar da rotina.
+          </p>
+        </details>
+
         <details>
           <summary>Posso levar crianças?</summary>
-          <p class="muted">Amamos os pequenos, mas a celebração será apenas para adultos.</p>
+          <p class="muted">
+            Sim, claro. As crianças são bem-vindas — só pedimos que tragam também os pais. O espaço será acolhedor e seguro para famílias.
+          </p>
         </details>
+
         <details>
           <summary>Posso levar acompanhante?</summary>
-          <p class="muted">Temos capacidade limitada; os convites valem para os nomes indicados.</p>
+          <p class="muted">
+            Temos capacidade limitada, por isso os convites valem apenas para os nomes indicados. Mas prometemos boas conversas e companhia de sobra durante a festa.
+          </p>
         </details>
+
         <details>
-          <summary>Fotos & redes sociais</summary>
-          <p class="muted">Fique à vontade para fotografar e usar a hashtag <strong>#CeN2026</strong>.</p>
+          <summary>Qual é o traje?</summary>
+          <p class="muted">
+            Sugerimos <strong>[passeio completo / cocktail / jardim-chic / praia elegante]</strong>. Pense em algo bonito, leve e confortável — afinal, ninguém quer desmaiar antes do brinde.
+          </p>
         </details>
-      </div>
-      <div class="card">
-        <h3>Contato</h3>
-        <p class="muted">Dúvidas? Escreva para <a href="mailto:you@example.com">you@example.com</a> ou chame no WhatsApp.</p>
-        <div class="cta">
-          <a class="btn" href="https://wa.me/5511967672903" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn" href="#top">Voltar ao topo</a>
-        </div>
-        <div style="height:8px"></div>
-        <div class="small" style="color:var(--muted)">Créditos (opcional): fotos, decoração, espaço, vestido.</div>
+
+        <details>
+          <summary>Onde e quando será a cerimônia e a festa?</summary>
+          <p class="muted">
+            Cerimônia: Estr. Taguaí, 370 – Chácara do Refúgio, Carapicuíba – SP, 06342-000, às 15h.<br>
+            Recomendamos chegar no estilo europeu... ou seja, exatamente no horário.
+          </p>
+        </details>
+
+        <details>
+          <summary>O que seria o melhor presente?</summary>
+          <p class="muted">
+            Ah, como você é insistente nesse tópico — e nós agradecemos! Temos uma lista online, mas não há maior demonstração de carinho do que um PIX bem feito.
+          </p>
+        </details>
+
+        <details>
+          <summary>Como confirmar presença (RSVP) e até quando?</summary>
+          <p class="muted">
+            Confirme até <strong>01.11.2025</strong> pelo formulário neste site ou pelo WhatsApp.<br>
+            Sua confirmação nos ajuda na organização — e garante seu lugar na pista de dança (ou no bar, se preferir).
+          </p>
+        </details>
+
+        <details>
+          <summary>Há estacionamento ou transporte?</summary>
+          <p class="muted">
+            Há estacionamento no local. Mas teremos um excelente bar, então o uso de aplicativos de transporte pode ser a escolha mais sábia da noite.
+          </p>
+        </details>
+
+        <details>
+          <summary>Terão opções para restrições alimentares?</summary>
+          <p class="muted">
+            Sim. Informe no formulário ou pelo WhatsApp se você tiver alguma restrição. Prometemos que ninguém vai sair só com salada no prato.
+          </p>
+        </details>
+
+        <details>
+          <summary>Há algo que vocês realmente gostariam de ganhar?</summary>
+          <p class="muted">
+            Com certeza: a sua presença, o carinho e algumas boas histórias na pista de dança.<br>
+            Mas, se a intenção for presentear, aceitamos contribuições para a nossa lua de mel — ou um bom vinho, se for irresistível.
+          </p>
+        </details>
+
+        <details>
+          <summary>Posso tirar fotos e postar nas redes?</summary>
+          <p class="muted">
+            Com certeza. Use a hashtag <strong>#CeN2026</strong> — assim conseguimos fingir que as fotos espontâneas foram planejadas.
+          </p>
+        </details>
+
+        <details>
+          <summary>E se chover / plano B?</summary>
+          <p class="muted">
+            Temos estrutura preparada para qualquer clima. E, sinceramente, se chover, pode até ficar mais bonito. O importante é celebrar juntos.
+          </p>
+        </details>
       </div>
     </section>
   </main>
 
+  <div style="width:100vw;display:flex;justify-content:center;align-items:center;margin:40px 0 0 0;">
+    <img src="logo_wedding_black.png" alt="Logo Caroline e Nikita Black" style="max-width:120px;width:100%;height:auto;opacity:0.7;" />
+  </div>
+
   <div class="floating-rsvp">
-    <a class="pill" href="#rsvp">Confirmar presença</a>
+    <a class="btn-primary" style="background:#fff;color:#111;font-weight:800;" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
   </div>
 
   <footer>

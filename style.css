@@ -281,6 +281,43 @@ label{ display:block; font-weight:600; margin-bottom:6px; color: var(--ink); }
 .mb-4{ margin-bottom:24px !important; }
 
 /* ==========================================================================
+   Language toggle (new)
+   ========================================================================== */
+
+.lang-toggle {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 28px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: filter .15s ease, opacity .15s ease, transform .04s ease;
+}
+
+.lang-btn img {
+  width: 18px;
+  height: 13px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* Active vs inactive */
+.lang-btn[aria-pressed="false"] { filter: grayscale(100%); opacity: .6; }
+.lang-btn[aria-pressed="true"]  { filter: none; opacity: 1; }
+
+
+/* ==========================================================================
    Responsive tweaks
    ========================================================================== */
 @media (max-width: 640px){

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!-- add this inside <head>, before your internal <style> or remove internal if you want external to win -->
-<link rel="stylesheet" href="style.css">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css"><!-- moved here -->
   <title>Caroline & Nikita — Casamento</title>
   <meta name="description" content="Guarde a data: 18/04/2026, em Espaço Casa Dona Diquinha — Cotia. Confirme presença e veja todos os detalhes." />
   <meta property="og:title" content="Caroline e Nikita — Casamento" />
@@ -232,15 +231,23 @@
   <header>
     <div class="container nav" aria-label="Primary">
       <div class="brand">
-        <span class="names">C + N</span>
-        <span class="chip">18.04.2026 · Cotia</span>
+        <span class="names" data-i18n="brand">C + N</span>
+        <span class="chip" data-i18n="date">18.04.2026 · Cotia</span>
       </div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="pt" aria-pressed="true" title="Português">
+            <img src="flag_br.png" alt="Português" />
+        </button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="flag_sct.png" alt="English" />
+        </button>
+        </div>
       <nav class="menu" aria-label="Seções do site">
-        <a href="#rsvp">RSVP</a>
-        <a href="#historia">História</a>
-        <a href="#detalhes">Detalhes</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#faq">Dúvidas</a>
+        <a href="#rsvp" data-i18n="nav_rsvp">RSVP</a>
+        <a href="#historia" data-i18n="nav_historia">História</a>
+        <a href="#detalhes" data-i18n="nav_detalhes">Detalhes</a>
+        <a href="#galeria" data-i18n="nav_galeria">Galeria</a>
+        <a href="#faq" data-i18n="nav_faq">Dúvidas</a>
       </nav>
     </div>
   </header>
@@ -248,12 +255,12 @@
   <section class="hero" id="top">
     <div class="hero-inner">
       <img src="logo_wedding.png" alt="Logo Caroline e Nikita" style="display:block;margin:0 auto 18px auto;max-width:120px;width:100%;height:auto;" />
-      <div class="kicker">C + N</div>
-      <h1>Caroline + Nikita</h1>
-      <p class="sub">dezoito de abril de dois mil e vinte e seis, às quinze horas — Cotia, SP.</p>
+      <div class="kicker" data-i18n="hero_kicker">C + N</div>
+      <h1 data-i18n="hero_title">Caroline + Nikita</h1>
+      <p class="sub" data-i18n="hero_sub">dezoito de abril de dois mil e vinte e seis, às quinze horas — Cotia, SP.</p>
       <div class="cta">
-        <a class="btn-primary" id="rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
-        <a class="btn-primary" href="#detalhes">Ver programação</a>
+        <a class="btn-primary rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener" data-i18n="hero_confirmar">Confirmar presença</a>
+        <a class="btn-primary" href="#detalhes" data-i18n="hero_programacao">Ver programação</a>
       </div>
       <p class="small" id="countdown" aria-live="polite">…</p>
     </div>
@@ -262,11 +269,10 @@
   <main class="container">
     <section id="historia" class="grid two">
       <div class="card">
-        <h2>História</h2>
-        <p class="muted">Caroline e Nikita se conheceram em fevereiro de 2020.<br>
-No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no bloquinho de Carnaval de Caetano Veloso, seus olhares se cruzaram e, entre confetes e serpentinas, eles se encontraram.</p>
-<p class="muted">Desde aquele dia, vieram viagens, risadas, jantares, planos e uma parceria que só cresceu. Entre o caos e a calmaria, entre o samba e as corridas, eles descobriram que o melhor lugar do mundo é onde estão juntos.</p>
-<p class="muted">Agora, alguns carnavais depois, chegou a hora de celebrar essa história, com todos que fizeram parte dela.</p>
+        <h2 data-i18n="historia_title">História</h2>
+        <p class="muted" data-i18n="historia_p1">Caroline e Nikita se conheceram em fevereiro de 2020.<br>No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no bloquinho de Carnaval de Caetano Veloso, seus olhares se cruzaram e, entre confetes e serpentinas, eles se encontraram.</p>
+        <p class="muted" data-i18n="historia_p2">Desde aquele dia, vieram viagens, risadas, jantares, planos e uma parceria que só cresceu. Entre o caos e a calmaria, entre o samba e as corridas, eles descobriram que o melhor lugar do mundo é onde estão juntos.</p>
+        <p class="muted" data-i18n="historia_p3">Agora, alguns carnavais depois, chegou a hora de celebrar essa história, com todos que fizeram parte dela.</p>
       </div>
       <div class="card">
         <h2>Local</h2>
@@ -323,7 +329,7 @@ No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no
       <div class="card">
         <h2>Confirmação</h2>
         <p class="muted">Por favor, confirme sua presença até <strong style="letter-spacing:0.18em;">01.12.2025</strong>.</p>
-        <a class="btn primary" id="rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Abrir formulário</a>
+        <a class="btn rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Abrir formulário</a>
         <p class="small">Se precisar de ajuda, fale conosco no WhatsApp.</p>
       </div>
       <div class="card">
@@ -437,7 +443,7 @@ No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no
   </div>
 
   <div class="floating-rsvp">
-    <a class="btn-primary" style="background:#fff;color:#111;font-weight:800;" href="#rsvp">Confirmar presença</a>
+    <a class="btn-primary" style="background:#fff;color:#111;font-weight:800;" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
   </div>
 
   <footer>
@@ -449,14 +455,36 @@ No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no
   <script>
     const $=(s,a=false)=>a?[...document.querySelectorAll(s)]:document.querySelector(s);
     const weddingDate=new Date('2026-04-18T16:00:00-03:00');
-    function tick(){
-      const el=$('#countdown'); const diff=+weddingDate-Date.now();
-      if(diff<=0){el.textContent='Hoje é o grande dia!';return;}
-      const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000);
-      el.textContent=`Faltam ${d} dias, ${h}h e ${m}min`;
-    }
-    tick(); setInterval(tick,60000);
+    function tick() {
+        const el = document.querySelector('#countdown');
+        if (!el) return;
 
+        const diff = +weddingDate - Date.now();
+        const lang = (document.documentElement.getAttribute('lang') || 'pt').toLowerCase();
+
+        if (diff <= 0) {
+            el.textContent = lang === 'en' ? "Today's the big day!" : 'Hoje é o grande dia!';
+            return;
+        }
+
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+
+        if (lang === 'en') {
+            const ds = d === 1 ? 'day' : 'days';
+            const hs = h === 1 ? 'hour' : 'hours';
+            const ms = m === 1 ? 'minute' : 'minutes';
+            el.textContent = `${d} ${ds}, ${h} ${hs} and ${m} ${ms} to go!`;
+        } else {
+            // PT (original)
+            el.textContent = `Faltam ${d} dias, ${h}h e ${m}min`;
+        }
+    }
+    tick();
+    setInterval(tick, 60 * 1000); // every minute is enough
+    document.addEventListener('langchange', tick);
+    
     const mapsUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('Espaço Casa Dona Diquinha, Cotia');
     const mapsLink=document.getElementById('mapsLink'); if(mapsLink) mapsLink.href=mapsUrl;
 
@@ -473,10 +501,46 @@ No meio de milhares de pessoas, em frente ao Theatro Municipal de São Paulo, no
       });
     }
 
-    const rsvpParam=new URLSearchParams(location.search).get('rsvp');
-    if(rsvpParam){ const btn=$('#rsvpBtn'); if(btn) btn.href=rsvpParam; }
+    const rsvpParam = new URLSearchParams(location.search).get('rsvp');
+    if (rsvpParam) document.querySelectorAll('.rsvpBtn').forEach(a => a.href = rsvpParam);
 
     const y=new Date().getFullYear(); const yEl=document.getElementById('year'); if(yEl) yEl.textContent=y;
+
+    // i18n translations
+    window.I18N = {
+        brand: { en: 'C + N' },
+        date: { en: '18.04.2026 · Cotia' },
+
+        nav_rsvp:      { en: 'RSVP' },
+        nav_historia:  { en: 'Story' },
+        nav_detalhes:  { en: 'Details' },
+        nav_galeria:   { en: 'Gallery' },
+        nav_faq:       { en: 'FAQ' },
+
+        hero_kicker:       { en: 'C + N' },
+        hero_title:        { en: 'Caroline + Nikita' },
+        hero_sub:          { en: 'Saturday, the eighteenth of April, twenty and twenty-six, at three o’clock in the afternoon — Cotia, SP.' },
+        hero_confirmar:    { en: 'Confirm attendance' },
+        hero_programacao:  { en: 'See schedule' },
+
+        historia_title: { en: 'Story' },
+        historia_p1: { en: 'Caroline and Nikita met in February 2020.<br>In the middle of thousands of people, in front of the Theatro Municipal de São Paulo, at Caetano Veloso’s Carnival block, their eyes met and, among confetti and streamers, they found each other.' },
+        historia_p2: { en: 'Since that day, there have been trips, laughter, dinners, plans, and a partnership that only grew. Through chaos and calm, samba and running, they discovered the best place in the world is wherever they are together.' },
+        historia_p3: { en: 'Now, a few carnivals later, it’s time to celebrate this story with everyone who has been part of it.' }
+    };
+
+    // let currentLang = 'pt';
+    // document.getElementById('langToggle').onclick = function() {
+    //   currentLang = currentLang === 'pt' ? 'en' : 'pt';
+    //   this.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+    //   document.querySelectorAll('[data-i18n]').forEach(el => {
+    //     const key = el.getAttribute('data-i18n');
+    //     if (currentLang === 'pt' || !translations.en[key]) return el.innerHTML = el.dataset.original || el.innerHTML;
+    //     if (!el.dataset.original) el.dataset.original = el.innerHTML;
+    //     el.innerHTML = translations.en[key];
+    //   });
+    // };
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
