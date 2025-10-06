@@ -197,6 +197,35 @@
       -webkit-text-stroke: 0 !important;
       text-shadow: none !important;
     }
+    @media (max-width:640px){
+      header {
+        padding: 0 0 0 0 !important;
+        min-height: 0 !important;
+      }
+      .container.nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 10px 2vw 10px 2vw !important;
+      }
+      .brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px !important;
+        font-size: 1em !important;
+        margin-bottom: 2px !important;
+      }
+      .names {
+        font-size: 18px !important;
+      }
+      .chip {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+      }
+      .menu {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
