@@ -93,6 +93,27 @@
     /* MASONRY GALLERY */
     .masonry{column-count:3;column-gap:14px}
     .masonry img{break-inside:avoid;margin:0 0 14px;border-radius:12px}
+
+    /* BODY/TEXT FONT */
+    body, p, .muted, .timeline, .menu a, .small, input, textarea, label, .countdown {
+      font-family: 'Poiret One', 'Inter', Arial, sans-serif !important;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    /* HEADINGS FONT */
+    h1, h2, h3, .faq-title, .lines, .names {
+      font-family: 'Morrison', 'Playfair Display', serif !important;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    /* ensure no stroke/shadow on chips/pills */
+    .chip, .pill {
+      -webkit-text-stroke: 0 !important;
+      text-shadow: none !important;
+    }
+    
     @media (max-width:980px){
       .two{grid-template-columns:1fr}
       .masonry{column-count:2}
