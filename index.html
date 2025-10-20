@@ -169,34 +169,6 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
-    }
-
-    /* FLOATING RSVP */
-    .floating-rsvp{position:fixed;right:16px;bottom:16px;z-index:50}
-    .pill {
-      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#000 !important;color:#d32f2f !important;font-weight:700;
-      -webkit-text-stroke: 0 !important;
-      text-shadow: none !important;
-    }
-
-    footer{padding:40px 0 80px;color:var(--muted);text-align:center}
-    .small{font-size:12px}
-
-    body, p, .muted, .timeline, .menu a, .small, input, textarea, label, .countdown {
-      font-family: 'Poiret One', 'Inter', Arial, sans-serif !important;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-    }
-    h1, h2, h3, .faq-title, .lines, .names {
-      font-family: 'Morrison', 'Playfair Display', serif !important;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-    .chip, .pill {
-      -webkit-text-stroke: 0 !important;
-      text-shadow: none !important;
-    }
-    @media (max-width:640px){
       header {
         padding: 0 0 0 0 !important;
         min-height: 0 !important;
@@ -275,48 +247,35 @@
         <p class="muted" data-i18n="historia_p3">Agora, alguns carnavais depois, chegou a hora de celebrar essa história, com todos que fizeram parte dela.</p>
       </div>
       <div class="card">
-        <!-- <h2>Local</h2>
-        <p class="muted"><strong>Espaço Casa Dona Diquinha</strong><br><span>Cotia, SP</span><br><a href="https://casadadonadiquinha.com.br/" target="_blank" rel="noopener" style="color:#111;text-decoration:underline;font-size:14px">Site do espaço</a></p>
-        <div class="cta">
-          <a class="btn" id="mapsLink" target="_blank" rel="noopener">Abrir no Google Maps</a>
-          <a class="btn" id="addCal">Adicionar ao calendário</a>
-        </div> -->
         <h2 data-i18n="local_title">Local</h2>
-          <p class="muted">
-            <strong>Espaço Casa Dona Diquinha</strong><br>
-            <span>Cotia, SP</span><br>
-            <a href="https://casadadonadiquinha.com.br/" target="_blank" rel="noopener"
-              style="color:#111;text-decoration:underline;font-size:14px"
-              data-i18n="local_site">Site do espaço</a>
-          </p>
-          <div class="cta">
-            <a class="btn" id="mapsLink" target="_blank" rel="noopener"
-              data-i18n="local_open_maps">Abrir no Google Maps</a>
-            <a class="btn" id="addCal" data-i18n="local_add_calendar">Adicionar ao calendário</a>
-          </div>
+        <p class="muted"><strong>Espaço Casa Dona Diquinha</strong><br><span>Cotia, SP</span><br><a href="https://casadadonadiquinha.com.br/" target="_blank" rel="noopener" style="color:#111;text-decoration:underline;font-size:14px" data-i18n="local_site">Site do espaço</a></p>
+        <div class="cta">
+          <a class="btn" id="mapsLink" target="_blank" rel="noopener" data-i18n="open_maps">Abrir no Google Maps</a>
+          <a class="btn" id="addCal" data-i18n="add_calendar">Adicionar ao calendário</a>
+        </div>
       </div>
     </section>
 
     <section id="detalhes" class="grid two">
       <div class="card">
-        <h2>Programação</h2>
+        <h2 data-i18n="programacao_title">Programação</h2>
         <ul class="timeline">
-          <li><strong>15:00</strong><span>Chegada dos convidados & welcome drink</span></li>
-          <li><strong>15:30</strong><span>Início da cerimônia</span></li>
-          <li><strong>16:30</strong><span>Coquetel</span></li>
-          <li><strong>18:30</strong><span>Jantar & brindes</span></li>
-          <li><strong>20:00</strong><span>Primeira dança & festa</span></li>
-          <li><strong>21:45</strong><span>Encerramento</span></li>
+          <li><strong>15:00</strong><span data-i18n="timeline_1">Chegada dos convidados & welcome drink</span></li>
+          <li><strong>15:30</strong><span data-i18n="timeline_2">Início da cerimônia</span></li>
+          <li><strong>16:30</strong><span data-i18n="timeline_3">Coquetel</span></li>
+          <li><strong>18:30</strong><span data-i18n="timeline_4">Jantar & brindes</span></li>
+          <li><strong>20:00</strong><span data-i18n="timeline_5">Primeira dança & festa</span></li>
+          <li><strong>21:45</strong><span data-i18n="timeline_6">Encerramento</span></li>
         </ul>
       </div>
       <div class="card">
         <h3>Dress Code</h3>
-        <p class="muted">Minimalista chic / esporte fino. Tons neutros bem‑vindos.</p>
-        <h3 style="margin-top:18px">Onde ficar</h3>
+        <p class="muted" data-i18n="dresscode_desc">Minimalista chic / esporte fino. Tons neutros bem‑vindos.</p>
+        <h3 style="margin-top:18px" data-i18n="onde_ficar_title">Onde ficar</h3>
         <ul class="muted">
-          <li>Hotel A — 10 min do local</li>
-          <li>Hotel B — 15 min do local</li>
-          <li>Pousada — 5 min a pé</li>
+          <li data-i18n="hotel_a">Hotel A — 10 min do local</li>
+          <li data-i18n="hotel_b">Hotel B — 15 min do local</li>
+          <li data-i18n="pousada">Pousada — 5 min a pé</li>
         </ul>
       </div>
     </section>
@@ -340,110 +299,110 @@
 
     <section id="rsvp" class="grid two">
       <div class="card">
-        <h2>Confirmação</h2>
-        <p class="muted">Por favor, confirme sua presença até <strong style="letter-spacing:0.18em;">01.12.2025</strong>.</p>
-        <a class="btn rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Abrir formulário</a>
-        <p class="small">Se precisar de ajuda, fale conosco no WhatsApp.</p>
+        <h2 data-i18n="rsvp_title">Confirmação</h2>
+        <p class="muted" data-i18n="rsvp_desc">Por favor, confirme sua presença até <strong style="letter-spacing:0.18em;">01.12.2025</strong>.</p>
+        <a class="btn rsvpBtn" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener" data-i18n="rsvp_form">Abrir formulário</a>
+        <p class="small" data-i18n="rsvp_help">Se precisar de ajuda, fale conosco no WhatsApp.</p>
       </div>
       <div class="card">
-        <h2>Presentes</h2>
-        <p class="muted">Dizem que a presença é o melhor presente…<br>Mas não vimos ninguém reclamar de um presente de verdade.</p>
+        <h2 data-i18n="presentes_title">Presentes</h2>
+        <p class="muted" data-i18n="presentes_desc">Dizem que a presença é o melhor presente…<br>Mas não vimos ninguém reclamar de um presente de verdade.</p>
         <div class="cta">
-          <a class="btn" href="#" aria-disabled="true">Lista em loja (em breve)</a>
-          <a class="btn" href="#" aria-disabled="true">Cota de lua de mel (em breve)</a>
-          <a class="btn" href="#" aria-disabled="true">Chave Pix (em breve)</a>
+          <a class="btn" href="#" aria-disabled="true" data-i18n="lista_loja">Lista em loja (em breve)</a>
+          <a class="btn" href="#" aria-disabled="true" data-i18n="cota_lua_de_mel">Cota de lua de mel (em breve)</a>
+          <a class="btn" href="#" aria-disabled="true" data-i18n="chave_pix">Chave Pix (em breve)</a>
         </div>
       </div>
     </section>
 
     <section id="faq" class="faq" style="max-width:900px;margin:0 auto;">
       <div class="card">
-        <h2 class="visually-hidden">Perguntas frequentes</h2>
+        <h2 class="visually-hidden" data-i18n="faq_title">Perguntas frequentes</h2>
 
         <details>
-          <summary>Existe lista de presentes?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q1">Existe lista de presentes?</summary>
+          <p class="muted" data-i18n="faq_a1">
             O seu carinho é o melhor presente. Mas, se ainda assim quiser contribuir, deixamos uma lista em
             <a href="[loja/link]" target="_blank" rel="noopener">[loja/link]</a> — e algumas cotas de lua de mel, caso queira ajudar a nos tirar da rotina.
           </p>
         </details>
 
         <details>
-          <summary>Posso levar crianças?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q2">Posso levar crianças?</summary>
+          <p class="muted" data-i18n="faq_a2">
             Sim, claro. As crianças são bem-vindas — só pedimos que tragam também os pais. O espaço será acolhedor e seguro para famílias.
           </p>
         </details>
 
         <details>
-          <summary>Posso levar acompanhante?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q3">Posso levar acompanhante?</summary>
+          <p class="muted" data-i18n="faq_a3">
             Temos capacidade limitada, por isso os convites valem apenas para os nomes indicados. Mas prometemos boas conversas e companhia de sobra durante a festa.
           </p>
         </details>
 
         <details>
-          <summary>Qual é o traje?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q4">Qual é o traje?</summary>
+          <p class="muted" data-i18n="faq_a4">
             Sugerimos <strong>[passeio completo / cocktail / jardim-chic / praia elegante]</strong>. Pense em algo bonito, leve e confortável — afinal, ninguém quer desmaiar antes do brinde.
           </p>
         </details>
 
         <details>
-          <summary>Onde e quando será a cerimônia e a festa?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q5">Onde e quando será a cerimônia e a festa?</summary>
+          <p class="muted" data-i18n="faq_a5">
             Cerimônia: Estr. Taguaí, 370 – Chácara do Refúgio, Carapicuíba – SP, 06342-000, às 15h.<br>
             Recomendamos chegar no estilo europeu... ou seja, exatamente no horário.
           </p>
         </details>
 
         <details>
-          <summary>O que seria o melhor presente?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q6">O que seria o melhor presente?</summary>
+          <p class="muted" data-i18n="faq_a6">
             Ah, como você é insistente nesse tópico — e nós agradecemos! Temos uma lista online, mas não há maior demonstração de carinho do que um PIX bem feito.
           </p>
         </details>
 
         <details>
-          <summary>Como confirmar presença (RSVP) e até quando?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q7">Como confirmar presença (RSVP) e até quando?</summary>
+          <p class="muted" data-i18n="faq_a7">
             Confirme até <strong>01.11.2025</strong> pelo formulário neste site ou pelo WhatsApp.<br>
             Sua confirmação nos ajuda na organização — e garante seu lugar na pista de dança (ou no bar, se preferir).
           </p>
         </details>
 
         <details>
-          <summary>Há estacionamento ou transporte?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q8">Há estacionamento ou transporte?</summary>
+          <p class="muted" data-i18n="faq_a8">
             Há estacionamento no local. Mas teremos um excelente bar, então o uso de aplicativos de transporte pode ser a escolha mais sábia da noite.
           </p>
         </details>
 
         <details>
-          <summary>Terão opções para restrições alimentares?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q9">Terão opções para restrições alimentares?</summary>
+          <p class="muted" data-i18n="faq_a9">
             Sim. Informe no formulário ou pelo WhatsApp se você tiver alguma restrição. Prometemos que ninguém vai sair só com salada no prato.
           </p>
         </details>
 
         <details>
-          <summary>Há algo que vocês realmente gostariam de ganhar?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q10">Há algo que vocês realmente gostariam de ganhar?</summary>
+          <p class="muted" data-i18n="faq_a10">
             Com certeza: a sua presença, o carinho e algumas boas histórias na pista de dança.<br>
             Mas, se a intenção for presentear, aceitamos contribuições para a nossa lua de mel — ou um bom vinho, se for irresistível.
           </p>
         </details>
 
         <details>
-          <summary>Posso tirar fotos e postar nas redes?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q11">Posso tirar fotos e postar nas redes?</summary>
+          <p class="muted" data-i18n="faq_a11">
             Com certeza. Use a hashtag <strong>#CeN2026</strong> — assim conseguimos fingir que as fotos espontâneas foram planejadas.
           </p>
         </details>
 
         <details>
-          <summary>E se chover / plano B?</summary>
-          <p class="muted">
+          <summary data-i18n="faq_q12">E se chover / plano B?</summary>
+          <p class="muted" data-i18n="faq_a12">
             Temos estrutura preparada para qualquer clima. E, sinceramente, se chover, pode até ficar mais bonito. O importante é celebrar juntos.
           </p>
         </details>
@@ -456,12 +415,12 @@
   </div>
 
   <div class="floating-rsvp">
-    <a class="btn-primary" style="background:#fff;color:#111;font-weight:800;" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener">Confirmar presença</a>
+    <a class="btn-primary" style="background:#fff;color:#111;font-weight:800;" href="https://forms.gle/YdFvN8Kehuo6zc5s7" target="_blank" rel="noopener" data-i18n="hero_confirmar">Confirmar presença</a>
   </div>
 
   <footer>
     <div class="container">
-      <p class="small">© <span id="year"></span> Caroline e Nikita. <span style="color:var(--muted)">Feito com carinho, e, quase, sem briga.</span></p>
+      <p class="small">© <span id="year"></span> Caroline e Nikita. <span style="color:var(--muted)" data-i18n="footer_credit">Feito com carinho, e, quase, sem briga.</span></p>
     </div>
   </footer>
 
@@ -524,29 +483,81 @@
         brand: { en: 'C + N' },
         date: { en: '18.04.2026 · Cotia' },
 
-        nav_rsvp:      { en: 'RSVP' },
-        nav_historia:  { en: 'Story' },
-        nav_detalhes:  { en: 'Details' },
-        nav_galeria:   { en: 'Gallery' },
-        nav_faq:       { en: 'FAQ' },
+        nav_rsvp: { en: 'RSVP' },
+        nav_historia: { en: 'Story' },
+        nav_detalhes: { en: 'Details' },
+        nav_galeria: { en: 'Gallery' },
+        nav_faq: { en: 'FAQ' },
 
-        hero_kicker:       { en: 'C + N' },
-        hero_title:        { en: 'Caroline + Nikita' },
-        hero_sub:          { en: 'Saturday, the eighteenth of April, twenty and twenty-six, at three o’clock in the afternoon — Cotia, SP.' },
-        hero_confirmar:    { en: 'Confirm attendance' },
-        hero_programacao:  { en: 'See schedule' },
+        hero_kicker: { en: 'C + N' },
+        hero_title: { en: 'Caroline + Nikita' },
+        hero_sub: { en: 'Saturday, the eighteenth of April, twenty and twenty-six, at three o’clock in the afternoon — Cotia, SP.' },
+        hero_confirmar: { en: 'Confirm attendance' },
+        hero_programacao: { en: 'See schedule' },
 
         historia_title: { en: 'Story' },
         historia_p1: { en: 'Caroline and Nikita met in February 2020.<br>In the middle of thousands of people, in front of the Theatro Municipal de São Paulo, at Caetano Veloso’s Carnival block, their eyes met and, among confetti and streamers, they found each other.' },
         historia_p2: { en: 'Since that day, there have been trips, laughter, dinners, plans, and a partnership that only grew. Through chaos and calm, samba and running, they discovered the best place in the world is wherever they are together.' },
         historia_p3: { en: 'Now, a few carnivals later, it’s time to celebrate this story with everyone who has been part of it.' },
 
-        local_title:      { en: 'Venue' },
-        local_site:       { en: 'Venue website' },
-        local_open_maps:  { en: 'Open in Google Maps' },
-        local_add_calendar:{ en: 'Add to calendar' }
-    };
+        local_title: { en: 'Venue' },
+        local_site: { en: 'Venue website' },
+        open_maps: { en: 'Open in Google Maps' },
+        add_calendar: { en: 'Add to calendar' },
 
+        programacao_title: { en: 'Schedule' },
+        timeline_1: { en: 'Guest arrival & welcome drink' },
+        timeline_2: { en: 'Start of ceremony' },
+        timeline_3: { en: 'Cocktail hour' },
+        timeline_4: { en: 'Dinner & toasts' },
+        timeline_5: { en: 'First dance & party' },
+        timeline_6: { en: 'End of party' },
+
+        dresscode_desc: { en: 'Minimalist chic / semi-formal. Neutral tones are welcome.' },
+        onde_ficar_title: { en: 'Where to stay' },
+        hotel_a: { en: 'Hotel A — 10 min from venue' },
+        hotel_b: { en: 'Hotel B — 15 min from venue' },
+        pousada: { en: 'Inn — 5 min walk' },
+
+        rsvp_title: { en: 'RSVP' },
+        rsvp_desc: { en: 'Please confirm your attendance by <strong style="letter-spacing:0.18em;">01.12.2025</strong>.' },
+        rsvp_form: { en: 'Open form' },
+        rsvp_help: { en: 'If you need any help, please contact us on WhatsApp.' },
+
+        presentes_title: { en: 'Gifts' },
+        presentes_desc: { en: 'They say your presence is the best gift…<br>But we haven’t seen anyone complain about a real gift.' },
+        lista_loja: { en: 'Gift registry (coming soon)' },
+        cota_lua_de_mel: { en: 'Honeymoon fund (coming soon)' },
+        chave_pix: { en: 'Pix key (coming soon)' },
+
+        faq_title: { en: 'Frequently Asked Questions' },
+        faq_q1: { en: 'Is there a gift registry?' },
+        faq_a1: { en: 'Your love is the best gift. However, if you still want to contribute, we’ve set up a list at <a href="[loja/link]" target="_blank" rel="noopener">[loja/link]</a> — and some honeymoon funds, in case you’d like to help us escape our routine.' },
+        faq_q2: { en: 'Can I bring children?' },
+        faq_a2: { en: 'Yes, of course. Children are welcome — we just ask that they bring their parents too. The venue will be welcoming and safe for families.' },
+        faq_q3: { en: 'Can I bring a guest?' },
+        faq_a3: { en: 'We have limited capacity, so invitations are only valid for the named guests. But we promise good conversations and plenty of company during the party.' },
+        faq_q4: { en: 'What’s the dress code?' },
+        faq_a4: { en: 'We suggest <strong>[Formal / Cocktail / Garden-chic / Beach formal]</strong>. Think of something nice, light, and comfortable — after all, nobody wants to pass out before the toast.' },
+        faq_q5: { en: 'Where and when will the ceremony and party be?' },
+        faq_a5: { en: 'Ceremony: Estr. Taguaí, 370 – Chácara do Refúgio, Carapicuíba – SP, 06342-000, at 3 PM.<br>We recommend arriving in European style... in other words, exactly on time.' },
+        faq_q6: { en: 'What would be the best gift?' },
+        faq_a6: { en: 'Oh, you’re so persistent on this subject — and we appreciate it! We have an online list, but there’s no greater demonstration of affection than a good PIX.' },
+        faq_q7: { en: 'How and until when can I RSVP?' },
+        faq_a7: { en: 'Please RSVP by <strong>01.11.2025</strong> via the form on this site or WhatsApp.<br>Your confirmation helps us organize — and guarantees your spot on the dance floor (or at the bar, if you prefer).' },
+        faq_q8: { en: 'Is there parking or transportation?' },
+        faq_a8: { en: 'There is parking on site. However, we will have an excellent bar, so using a ride-share app might be the wisest choice of the night.' },
+        faq_q9: { en: 'Will there be options for dietary restrictions?' },
+        faq_a9: { en: 'Yes. Please let us know in the form or via WhatsApp if you have any restrictions. We promise no one will leave with only salad on their plate.' },
+        faq_q10: { en: 'Is there anything you two really want to receive?' },
+        faq_a10: { en: 'Absolutely: your presence, love, and some good stories on the dance floor.<br>But if you really want to give something, we welcome contributions to our honeymoon — or a good bottle of wine, if it’s irresistible.' },
+        faq_q11: { en: 'Can I take photos and post them on social media?' },
+        faq_a11: { en: 'Absolutely. Use the hashtag <strong>#CeN2026</strong> — that way we can pretend the candid photos were planned.' },
+        faq_q12: { en: 'What if it rains / Plan B?' },
+        faq_a12: { en: 'We have a plan in place for any weather. And honestly, if it rains, it could even be more beautiful. The important thing is celebrating together.' },
+
+        footer_credit: { en: 'Made with love and (almost) no fights.' }
+    };
     // let currentLang = 'pt';
     // document.getElementById('langToggle').onclick = function() {
     //   currentLang = currentLang === 'pt' ? 'en' : 'pt';
