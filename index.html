@@ -94,6 +94,13 @@
     .masonry{column-count:3;column-gap:14px}
     .masonry img{break-inside:avoid;margin:0 0 14px;border-radius:12px}
 
+    /* FLOATING RSVP */
+    .floating-rsvp{position:fixed;right:16px;bottom:16px;z-index:50}
+    .pill {
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#000 !important;color:#d32f2f !important;font-weight:700;
+      -webkit-text-stroke: 0 !important;
+      text-shadow: none !important;
+    }
     /* BODY/TEXT FONT */
     body, p, .muted, .timeline, .menu a, .small, input, textarea, label, .countdown {
       font-family: 'Poiret One', 'Inter', Arial, sans-serif !important;
@@ -113,7 +120,7 @@
       -webkit-text-stroke: 0 !important;
       text-shadow: none !important;
     }
-    
+
     @media (max-width:980px){
       .two{grid-template-columns:1fr}
       .masonry{column-count:2}
