@@ -354,6 +354,24 @@
       </div>
     </section> -->
 
+    <!-- <section id="galeria">
+      <div class="card" style="padding:18px 18px 6px">
+        <div class="masonry" aria-label="Galeria de fotos">
+          <img src="gallery/1.JPG" alt="" />
+          <img src="gallery/2.jpeg" alt="" />
+          <img src="gallery/3.JPG" alt="" />
+          <img src="gallery/4.JPG" alt="" />
+          <img src="gallery/5.JPG" alt="" />
+          <img src="gallery/6.JPG" alt="" />
+          <img src="gallery/7.JPG" alt="" />
+          <img src="gallery/8.JPG" alt="" />
+          <img src="gallery/9.JPG" alt="" />
+          <img src="gallery/10.JPG" alt="" />
+          <img src="gallery/11.JPG" alt="" />
+          <img src="gallery/12.jpeg" alt="" />
+        </div>
+      </div>
+    </section> -->
     <section id="galeria">
       <div class="card" style="padding:18px 18px 6px">
         <div class="masonry" aria-label="Galeria de fotos">
@@ -371,7 +389,24 @@
           <img src="gallery/12.jpeg" alt="" />
         </div>
       </div>
+
+      <style>
+        .masonry {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          gap: 12px;
+        }
+
+        .masonry img {
+          width: 100%;
+          aspect-ratio: 3 / 4;   /* uniform editorial look */
+          object-fit: cover;
+          border-radius: 6px;
+          display: block;
+        }
+      </style>
     </section>
+
 
     <section id="rsvp" class="grid two">
       <div class="card">
