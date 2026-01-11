@@ -280,6 +280,12 @@ label{ display:block; font-weight:600; margin-bottom:6px; color: var(--ink); }
   opacity: 0.85;
 }
 
+/* --- Force underline for Dress Code link --- */
+a.link-dicas {
+  text-decoration: underline !important;
+}
+
+
 /* ==========================================================================
    Utilities
    ========================================================================== */
